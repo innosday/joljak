@@ -33,7 +33,7 @@ while True:
 #    frame = cv2.resize(frame, (1020, 500))
     
     # Run YOLOv8 tracking on the frame, persisting tracks between frames
-    results = model.track(frame, persist=True,imgsz=256)
+    results = model.track(frame, persist=True, imgsz=256, verbose=False)
     checkObject = []
     # Check if there are any boxes in the results
     if results[0].boxes is not None and results[0].boxes.id is not None:
